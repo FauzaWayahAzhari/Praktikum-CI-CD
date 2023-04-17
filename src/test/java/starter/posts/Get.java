@@ -28,4 +28,19 @@ public class Get {
     public void receiveValidData() {
         restAssuredThat(response -> response.body("'title'", equalTo("sunt aut facere repellat provident occaecati excepturi optio reprehenderit")));
     }
+    public static String url3 = "https://jsonplaceholder.typicode.com/";
+    @Step("I set valid GET endpointss")
+    public String setValidGetEndpointss() {
+        return url3 + "post/1";
+    }
+    @Step("I send GET HTTP requestsss")
+    public void sendGetHttpRequestsss(){
+        SerenityRest.given()
+                .when()
+                .get(setValidGetEndpointss());
+    }
+    @Step("I receive valid HTTP responsesss code 404")
+    public void receiveValidHttpResponsesss(){
+        restAssuredThat(responsess -> responsess.statusCode(404));
+    }
 }

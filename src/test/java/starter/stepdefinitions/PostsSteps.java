@@ -26,4 +26,15 @@ public class PostsSteps {
     public void receiveValidData(){
         get.receiveValidData();
     }
+    @Given("I set valid GET endpointss")
+    public void setValidGetEndpointss(){
+        get.setValidGetEndpointss();
+    }
+    @When("I send GET HTTP requestsss")
+    public void sendGetHttpRequestsss(){get.sendGetHttpRequestsss();
+    }
+    @Then("I receive valid HTTP responsesss code 404")
+    public void receiveValidHttpResponsesss(){
+        get.receiveValidHttpResponsesss();
+    }
 }

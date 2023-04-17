@@ -8,3 +8,8 @@ Feature: Posts
     When I send GET HTTP requestss
     Then I receive valid HTTP responsess code 200
     And I receive valid data for detail posts
+
+  Scenario: Get By Id - As user I input invalid endpoint
+    Given I set valid GET endpointss
+    When I send GET HTTP requestsss
+    Then I receive valid HTTP responsesss code 404
